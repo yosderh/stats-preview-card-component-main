@@ -1,0 +1,239 @@
+/* ## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+### Neutral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+## Typography
+
+### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400 */
+
+:root{
+            /* ### Primary */
+            --Very-dark-blue: hsl(233, 47%, 7%);
+            --Dark-desaturated-blue: hsl(244, 38%, 16%);
+            --Soft-violet: hsl(277, 64%, 61%);
+    
+
+             /* ### Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --color-paragraph: hsla(0, 0%, 100%, 0.75);
+    --color-headings: hsla(0, 0%, 100%, 0.6);
+
+    --fuente-uno: 'Inter', sans-serif;
+    --fuente-dos: 'Lexend Deca', sans-serif;
+}
+
+
+body{
+    font-size: 15px;
+    background-color: var(--Very-dark-blue);
+    color: white;  /*ESTO ES MIENTRAS.. BORRAR*/
+    
+}
+
+
+/* ########### MOBILE ################# */
+
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    margin: 88px auto;
+    
+    
+}
+
+.card-container{
+    background-color: var(--Dark-desaturated-blue);
+    width: 90%;
+    max-width: 460px;
+    min-height: 780px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.card-heading-img{
+    width: 100%;
+    height: 240px;
+    background-image: url(./images/image-header-mobile.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px 8px 0 0;
+}
+.card-over-img{
+    width: 100%;
+    height: 100%;
+    background-color: var(--Soft-violet);
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    opacity: 60%;
+}
+
+
+.card-tittle{
+    padding: 38px 25px;
+}
+.card-tittle h1 {
+    font-family: var(--fuente-uno);
+    font-size: 26px;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.card-tittle h1 span{
+    color: var(--Soft-violet);
+}
+
+.card-tittle p{
+    color: var(--color-headings);
+    font-family: var(--fuente-uno);
+    line-height: 25px;
+}
+
+.card-info-our ul{
+list-style: none;
+display: grid;
+grid-template-columns: 1fr;
+place-items: center;
+row-gap: 30px;
+padding: 0;
+margin-bottom: 40px;
+}
+
+.card-info-our li{
+    color: var(--color-headings);
+    font-family: var(--fuente-uno);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.card-info-our li span{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: var(--fuente-uno);
+    color: var(--white);
+    line-height: 45px;
+}
+
+
+@media (min-width: 880px){
+    .card-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 40px; */
+        max-width: none;
+    }
+
+    .card-allText-grid{
+        grid-area: 1/1 / 2/2;
+        padding: 72px 90px 30px 72px;
+
+
+
+    } 
+    .card-heading-img{
+        width: 100%;
+        height: 100%;
+        background-image: url(./images/image-header-desktop.jpg);
+        background-position: center;
+        background-size:cover;
+        background-repeat: no-repeat;
+    }   
+
+    .card-info-our ul{
+        display: flex;
+        gap: 60px;
+    }
+    .card-info-our li{
+        text-align: left;
+    }
+    .card-info-our li span{
+        font-size: 22px;
+    }
+
+    .card-container {
+        min-height: 0;
+        text-align: inherit;
+    }
+
+    .card-tittle{
+        padding: 0;
+    }
+
+    .card-tittle h1{
+        font-size: 34px;
+       margin: 0;
+    }
+    .card-tittle p{
+        width: 90%;
+        margin-bottom: 80px;
+    }
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { 
+    font-size: 11px; text-align: center;
+    background-color: gray;
+    height: 40px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 10px;
+}
+    .attribution a {
+         color: white;
+         text-decoration: none;
+         }
